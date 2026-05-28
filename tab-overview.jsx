@@ -1,4 +1,4 @@
-/* PRISM — Executive Overview tab
+/* PRISM - Executive Overview tab
    - Live multi-agent pipeline (hero)
    - KPI tiles
    - Routing donut + Recent POs + Live feed
@@ -287,7 +287,7 @@ const ErrorByCategoryCard = () => {
   const sorted = [...D.CATEGORIES].sort((a,b) => b.errPrev - a.errPrev).slice(0, 8);
   const maxErr = Math.max(...sorted.map(c => c.errPrev));
   return (
-    <Card title="Misclassification rate — before / after PRISM" sub="last 90 days vs. baseline" padded={true}>
+    <Card title="Misclassification rate - before / after PRISM" sub="last 90 days vs. baseline" padded={true}>
       <div style={{ display:'flex', flexDirection: 'column', gap: 9 }}>
         {sorted.map(c => (
           <div key={c.code}>

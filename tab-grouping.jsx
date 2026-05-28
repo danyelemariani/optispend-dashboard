@@ -1,4 +1,4 @@
-/* OptiSpend — Raggruppa ordini
+/* OptiSpend - Raggruppa ordini
    Auto-grouping orders from same supplier to reduce shipping costs.
 */
 
@@ -38,7 +38,7 @@ const TabGrouping = () => {
 
       <div style={{ display:'flex', alignItems:'center', gap: 10, marginBottom: 12, fontSize: 13, color: 'var(--muted)' }}>
         <Icon name="sparkles" size={14}/>
-        Mostrando {groups.length} gruppi suggeriti — finestra: {window_ === 'week' ? '7 giorni' : window_ === 'biweek' ? '15 giorni' : '30 giorni'} · porto comune
+        Mostrando {groups.length} gruppi suggeriti - finestra: {window_ === 'week' ? '7 giorni' : window_ === 'biweek' ? '15 giorni' : '30 giorni'} · porto comune
       </div>
 
       {groups.map((g, i) => (
@@ -120,9 +120,9 @@ const buildGroups = (D) => {
       total: 19_800,
       savings: 880,
       lines: [
-        { id:'PO-2026-48177', desc:'Mobilgear SHC XMP 320 — 4× drum 208 L',                             ship:'MV Ionian Voyager', amount:  6_240, conf: 0.96 },
-        { id:'PO-2026-48143', desc:'Mobilgard 412 (TBN 12) — 6× IBC 1000L',                             ship:'MV Tirreno Star',   amount: 11_400, conf: 0.94 },
-        { id:'PO-2026-48092', desc:'Grasso multifunzionale — 24 cartucce',                              ship:'MV Cattolica',      amount:  2_160, conf: 0.82 },
+        { id:'PO-2026-48177', desc:'Mobilgear SHC XMP 320 - 4× drum 208 L',                             ship:'MV Ionian Voyager', amount:  6_240, conf: 0.96 },
+        { id:'PO-2026-48143', desc:'Mobilgard 412 (TBN 12) - 6× IBC 1000L',                             ship:'MV Tirreno Star',   amount: 11_400, conf: 0.94 },
+        { id:'PO-2026-48092', desc:'Grasso multifunzionale - 24 cartucce',                              ship:'MV Cattolica',      amount:  2_160, conf: 0.82 },
       ],
     },
     {
@@ -133,7 +133,7 @@ const buildGroups = (D) => {
       savings: 1_580,
       lines: [
         { id:'PO-2026-48201', desc:'Filtri olio motore principale MAN B&W 7S60ME-C, lotto 12 pz',       ship:'MV Vesuvio',        amount: 18_320, conf: 0.94 },
-        { id:'PO-2026-48133', desc:'Valvole di scarico + sedi — kit revisione completo',                ship:'MV Etna Express',   amount: 23_820, conf: 0.89 },
+        { id:'PO-2026-48133', desc:'Valvole di scarico + sedi - kit revisione completo',                ship:'MV Etna Express',   amount: 23_820, conf: 0.89 },
       ],
     },
     {
@@ -154,9 +154,9 @@ const buildGroups = (D) => {
       total: 4_120,
       savings: 320,
       lines: [
-        { id:'PO-2026-48172', desc:'Detergente sgrassante industriale 25L — 40 taniche',                ship:'MV Vesuvio',        amount: 1_280, conf: 0.78 },
-        { id:'PO-2026-48141', desc:'Salviette industriali — 12 confezioni',                             ship:'MV Capri Pearl',    amount:   840, conf: 0.71 },
-        { id:'PO-2026-48118', desc:'Carta assorbente per spillamenti olio — 6 rotoli',                  ship:'MV Cattolica',      amount: 2_000, conf: 0.66 },
+        { id:'PO-2026-48172', desc:'Detergente sgrassante industriale 25L - 40 taniche',                ship:'MV Vesuvio',        amount: 1_280, conf: 0.78 },
+        { id:'PO-2026-48141', desc:'Salviette industriali - 12 confezioni',                             ship:'MV Capri Pearl',    amount:   840, conf: 0.71 },
+        { id:'PO-2026-48118', desc:'Carta assorbente per spillamenti olio - 6 rotoli',                  ship:'MV Cattolica',      amount: 2_000, conf: 0.66 },
       ],
     },
   ];

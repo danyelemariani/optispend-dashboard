@@ -1,4 +1,4 @@
-/* PRISM — Spend Analysis tab */
+/* PRISM - Spend Analysis tab */
 
 const TabSpend = () => {
   const D = window.PRISM_DATA;
@@ -9,7 +9,7 @@ const TabSpend = () => {
       <div className="page-head">
         <div>
           <h1>Spend Analysis</h1>
-          <div className="sub">Reclassified spend — Mediterranea Cargo Lines · Jan – May 2026</div>
+          <div className="sub">Reclassified spend - Mediterranea Cargo Lines · Jan – May 2026</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="filter" size={13}/> Filter</button>
@@ -28,7 +28,7 @@ const TabSpend = () => {
 
       {/* Treemap + Tail spend */}
       <div className="grid-2-1" style={{ marginBottom: 16 }}>
-        <Card title="Spend by category — reclassified view" sub="UNSPSC, after PRISM"
+        <Card title="Spend by category - reclassified view" sub="UNSPSC, after PRISM"
           right={
             <div className="tog">
               <button className={grouping==='category'?'on':''} onClick={() => setGrouping('category')}>Category</button>
@@ -52,7 +52,7 @@ const TabSpend = () => {
           </div>
         </Card>
 
-        <Card title="Tail spend — Pareto" sub="80 / 20">
+        <Card title="Tail spend - Pareto" sub="80 / 20">
           <ParetoChart/>
           <div style={{ display:'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginTop: 14 }}>
             <MiniStat label="Top 20% vendors" value="9.8 M€" tone="ok"/>

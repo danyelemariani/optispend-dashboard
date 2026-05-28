@@ -146,7 +146,7 @@ const Treemap = ({ items, width, height }) => {
   // items: [{ label, value, color, sub }]
   const total = items.reduce((a, b) => a + b.value, 0);
   const rects = [];
-  // Simple recursive split layout — alternates dominant axis
+  // Simple recursive split layout - alternates dominant axis
   const layout = (list, x, y, w, h, horiz) => {
     if (list.length === 0) return;
     if (list.length === 1) {

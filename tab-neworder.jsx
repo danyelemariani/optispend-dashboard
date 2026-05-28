@@ -1,4 +1,4 @@
-/* OptiSpend — Crea Ordine
+/* OptiSpend - Crea Ordine
    Form for new PO creation with AI-suggested predefined options per field.
 */
 
@@ -60,7 +60,7 @@ const TabNewOrder = () => {
       <div className="page-head">
         <div>
           <h1>Crea nuovo ordine</h1>
-          <div className="sub">Il sistema suggerisce opzioni predefinite ad ogni campo — l'utente conferma o modifica. Riduce errori e standardizza i dati.</div>
+          <div className="sub">Il sistema suggerisce opzioni predefinite ad ogni campo - l'utente conferma o modifica. Riduce errori e standardizza i dati.</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="book" size={13}/> Carica da template</button>
@@ -163,12 +163,12 @@ const TabNewOrder = () => {
         {/* Preview / AI assist */}
         <div style={{ display:'flex', flexDirection:'column', gap: 14 }}>
           <Card title="Riepilogo">
-            <KVRow l="Totale stimato" v={total ? fmtEURexact(total) : '—'} big/>
-            <KVRow l="Nave"      v={form.ship || '—'}/>
-            <KVRow l="Fornitore" v={form.vendor || '—'}/>
-            <KVRow l="Categoria" v={form.category || aiCat || '—'} hint={!form.category && aiCat ? 'suggerita AI' : null}/>
-            <KVRow l="Tratta"    v={form.portOrigin && form.portDest ? `${form.portOrigin} → ${form.portDest}` : '—'}/>
-            <KVRow l="Quantità"  v={form.qty ? `${form.qty} ${form.uom}` : '—'}/>
+            <KVRow l="Totale stimato" v={total ? fmtEURexact(total) : '-'} big/>
+            <KVRow l="Nave"      v={form.ship || '-'}/>
+            <KVRow l="Fornitore" v={form.vendor || '-'}/>
+            <KVRow l="Categoria" v={form.category || aiCat || '-'} hint={!form.category && aiCat ? 'suggerita AI' : null}/>
+            <KVRow l="Tratta"    v={form.portOrigin && form.portDest ? `${form.portOrigin} → ${form.portDest}` : '-'}/>
+            <KVRow l="Quantità"  v={form.qty ? `${form.qty} ${form.uom}` : '-'}/>
             <KVRow l="Incoterms" v={form.incoterms}/>
             <KVRow l="Consegna entro" v={form.needBy}/>
           </Card>
@@ -178,7 +178,7 @@ const TabNewOrder = () => {
             <Suggest icon="check" tone="green" title="Categoria suggerita"
               body={aiCat ? <>Sulla base della descrizione, la categoria probabile è <b>{aiCat}</b>. Click sul chip per applicare.</> : 'Inserisci una descrizione per ricevere suggerimenti.'}/>
             <Suggest icon="link" tone="blue" title="Possibile raggruppamento"
-              body={<>Esistono <b>3 ordini aperti</b> verso <b>{form.vendor || 'Wärtsilä Service Italy'}</b> nella stessa settimana — potresti consolidare la spedizione (risparmio ~€640).</>}/>
+              body={<>Esistono <b>3 ordini aperti</b> verso <b>{form.vendor || 'Wärtsilä Service Italy'}</b> nella stessa settimana - potresti consolidare la spedizione (risparmio ~€640).</>}/>
             <Suggest icon="flag" tone="amber" title="Verifica budget"
               body={<>La categoria <b>{aiCat || 'Marine Spare Parts'}</b> è al <b>87%</b> del budget mensile. Probabile semaforo <span className="status-light yellow"><span className="glow"/>giallo</span> in fase di revisione.</>}/>
             <Suggest icon="shield" tone="purple" title="Compliance"
@@ -187,9 +187,9 @@ const TabNewOrder = () => {
 
           <Card title="Validazione" sub="real-time">
             <Validation ok title="Fornitore in anagrafica" body="Verificato in master data SAP."/>
-            <Validation ok title="UNSPSC valido" body={`Codice ${aiCat ? '15101500' : '—'} esiste e attivo.`}/>
+            <Validation ok title="UNSPSC valido" body={`Codice ${aiCat ? '15101500' : '-'} esiste e attivo.`}/>
             <Validation warn title="Prezzo entro la fascia"
-              body="Prezzo unitario nel 92° percentile storico per questa categoria — verifica."/>
+              body="Prezzo unitario nel 92° percentile storico per questa categoria - verifica."/>
             <Validation ok title="Documenti previsti" body="3/3 documenti standard per la categoria."/>
           </Card>
         </div>

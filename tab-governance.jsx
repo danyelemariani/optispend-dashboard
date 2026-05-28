@@ -1,4 +1,4 @@
-/* PRISM — Governance & Audit tab */
+/* PRISM - Governance & Audit tab */
 
 const TabGovernance = () => {
   const D = window.PRISM_DATA;
@@ -7,7 +7,7 @@ const TabGovernance = () => {
       <div className="page-head">
         <div>
           <h1>Governance &amp; Audit</h1>
-          <div className="sub">Layer 3 — accountability · model lineage · audit trail</div>
+          <div className="sub">Layer 3 - accountability · model lineage · audit trail</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="download" size={13}/> Export audit log</button>
@@ -50,10 +50,10 @@ const TabGovernance = () => {
 
         <Card title="Compliance posture">
           <div style={{ display:'flex', flexDirection: 'column', gap: 10 }}>
-            <ComplianceItem ok title="EU AI Act — high-risk classification" sub="DPIA · data lineage · human oversight"/>
-            <ComplianceItem ok title="GDPR — data residency (Azure EU)" sub="processing region: West Europe (Amsterdam)"/>
-            <ComplianceItem ok title="ISO/IEC 42001 — AI management" sub="certified · audit 2026-03"/>
-            <ComplianceItem ok title="SOC 2 Type II — data security" sub="renewed 2026-01"/>
+            <ComplianceItem ok title="EU AI Act - high-risk classification" sub="DPIA · data lineage · human oversight"/>
+            <ComplianceItem ok title="GDPR - data residency (Azure EU)" sub="processing region: West Europe (Amsterdam)"/>
+            <ComplianceItem ok title="ISO/IEC 42001 - AI management" sub="certified · audit 2026-03"/>
+            <ComplianceItem ok title="SOC 2 Type II - data security" sub="renewed 2026-01"/>
             <ComplianceItem warn title="UNSPSC dictionary version drift" sub="6 codes outdated · update queued"/>
             <ComplianceItem ok title="Model card v3.2 published" sub="explainability + bias evaluation"/>
           </div>
@@ -61,7 +61,7 @@ const TabGovernance = () => {
       </div>
 
       <div className="grid-2" style={{ marginBottom: 16 }}>
-        <Card title="Model lineage" sub="v3.2 — current">
+        <Card title="Model lineage" sub="v3.2 - current">
           <ModelLineage/>
         </Card>
         <Card title="Roles &amp; access" sub="RBAC">

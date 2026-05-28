@@ -1,4 +1,4 @@
-/* PRISM — Review Queue (Human in the Loop) */
+/* PRISM - Review Queue (Human in the Loop) */
 
 const TabQueue = ({ onOpenDetail }) => {
   const D = window.PRISM_DATA;
@@ -13,7 +13,7 @@ const TabQueue = ({ onOpenDetail }) => {
       <div className="page-head">
         <div>
           <h1>Review Queue</h1>
-          <div className="sub">Layer 4 — Human in the loop · review &amp; corrections feed retraining</div>
+          <div className="sub">Layer 4 - Human in the loop · review &amp; corrections feed retraining</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="filter" size={13}/> Filter</button>
@@ -119,7 +119,7 @@ const ReviewDetail = ({ po, onOpenDetail }) => {
           <div style={{ fontSize: 13, lineHeight: 1.55, color:'var(--ink-2)' }}>
             <p style={{ marginTop: 0 }}>The description contains two strong category signals:</p>
             <ul style={{ paddingLeft: 18, margin: '6px 0' }}>
-              <li><b>Lexical:</b> &ldquo;IFO 380 cSt&rdquo; is industry shorthand for <i>Intermediate Fuel Oil, 380 centistoke viscosity</i> — bunker fuel.</li>
+              <li><b>Lexical:</b> &ldquo;IFO 380 cSt&rdquo; is industry shorthand for <i>Intermediate Fuel Oil, 380 centistoke viscosity</i> - bunker fuel.</li>
               <li><b>Quantity unit:</b> &ldquo;240&nbsp;MT&rdquo; (metric tonnes) and the magnitude (€142k) match typical bunker fuel orders.</li>
               <li><b>Vendor:</b> ENI Marine Fuels exclusively supplies marine fuels.</li>
             </ul>

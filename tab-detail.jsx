@@ -1,4 +1,4 @@
-/* PRISM — PO Detail + Explainability tab */
+/* PRISM - PO Detail + Explainability tab */
 
 const TabDetail = () => {
   const D = window.PRISM_DATA;
@@ -47,7 +47,7 @@ const TabDetail = () => {
 
       {/* SHAP + LLM reasoning */}
       <div className="grid-2">
-        <Card title="ML feature attribution" sub="SHAP — XGBoost v3.2">
+        <Card title="ML feature attribution" sub="SHAP - XGBoost v3.2">
           <ShapBars/>
           <div style={{ marginTop: 10, padding: 10, background: 'var(--info-bg)', borderRadius: 8, fontSize: 12, color:'var(--info)' }}>
             <b>Top driver:</b> vendor identity (ENI) contributes +0.42 to the &ldquo;Bunker Fuel&rdquo; logit. Unit of measure &ldquo;MT&rdquo; adds +0.21.
@@ -60,7 +60,7 @@ const TabDetail = () => {
               Found marine-fuel jargon: <code className="mono">IFO 380 cSt</code>, <code className="mono">cSt</code> = centistoke (viscosity), <code className="mono">MT</code> = metric tonne, port name <i>Algeciras</i>.
             </ReasonStep>
             <ReasonStep n="2" title="Map to UNSPSC family">
-              IFO is intermediate fuel oil — UNSPSC segment <b>15</b> (Fuels). Most specific: <b>15101500</b> &mdash; bunker fuel.
+              IFO is intermediate fuel oil - UNSPSC segment <b>15</b> (Fuels). Most specific: <b>15101500</b> &mdash; bunker fuel.
             </ReasonStep>
             <ReasonStep n="3" title="Validate vendor consistency">
               Vendor &ldquo;ENI Marine Fuels&rdquo; historical category distribution: 98% Bunker Fuel. Consistent.

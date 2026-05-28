@@ -1,4 +1,4 @@
-/* PRISM — Multi-Agent Monitoring tab */
+/* PRISM - Multi-Agent Monitoring tab */
 
 const TabAgents = () => {
   const D = window.PRISM_DATA;
@@ -7,7 +7,7 @@ const TabAgents = () => {
       <div className="page-head">
         <div>
           <h1>Multi-Agent Monitoring</h1>
-          <div className="sub">Layer 2 — LangGraph orchestration · 4 agents · health, latency, accuracy</div>
+          <div className="sub">Layer 2 - LangGraph orchestration · 4 agents · health, latency, accuracy</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="cog" size={13}/> Configure weights</button>
@@ -149,7 +149,7 @@ const AgreementMatrix = () => {
               background: i===j ? 'var(--bg-2)' : cell(v),
               borderRadius: 6, fontSize: 12, fontWeight: 600,
               color: i===j ? 'var(--muted)' : (v > 88 ? '#fff' : 'var(--ink)')
-            }} className="tnum">{i===j ? '—' : v + '%'}</div>
+            }} className="tnum">{i===j ? '-' : v + '%'}</div>
           ))}
         </React.Fragment>
       ))}

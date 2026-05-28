@@ -1,4 +1,4 @@
-/* PRISM — main app shell */
+/* PRISM - main app shell */
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "light",

@@ -1,4 +1,4 @@
-/* PRISM — Supplier Consolidation tab */
+/* PRISM - Supplier Consolidation tab */
 
 const TabSuppliers = () => {
   const D = window.PRISM_DATA;
@@ -50,7 +50,7 @@ const TabSuppliers = () => {
           </table>
         </Card>
 
-        <Card title="Score breakdown — top supplier" sub="ENI Marine Fuels">
+        <Card title="Score breakdown - top supplier" sub="ENI Marine Fuels">
           <ScoreRadar/>
           <div style={{ display:'flex', flexDirection:'column', gap: 4, marginTop: 10, fontSize: 12 }}>
             {[
@@ -142,7 +142,7 @@ const primaryCats = (i) => {
     ['Provisions / Galley'],
     ['Cleaning & Hygiene'],
   ];
-  return (groups[i] || ['—']).join(' · ');
+  return (groups[i] || ['-']).join(' · ');
 };
 
 const ScoreRadar = () => {

@@ -1,4 +1,4 @@
-/* PRISM — Model Performance & Drift tab */
+/* PRISM - Model Performance & Drift tab */
 
 const TabModel = () => {
   const D = window.PRISM_DATA;
@@ -7,7 +7,7 @@ const TabModel = () => {
       <div className="page-head">
         <div>
           <h1>Model Performance &amp; Drift</h1>
-          <div className="sub">v3.2 — XGBoost ensemble + LLM head · MLflow tracked</div>
+          <div className="sub">v3.2 - XGBoost ensemble + LLM head · MLflow tracked</div>
         </div>
         <div className="actions">
           <button className="btn btn-sm"><Icon name="cog" size={13}/> Retrain settings</button>
@@ -24,7 +24,7 @@ const TabModel = () => {
       </div>
 
       <div className="grid-2-1" style={{ marginBottom: 16 }}>
-        <Card title="Drift detection" sub="population stability index (PSI) — 90 days">
+        <Card title="Drift detection" sub="population stability index (PSI) - 90 days">
           <LineChart data={D.DRIFT} w={760} h={220} color="var(--accent-purple)" threshold={0.1} label="days (90d window)"/>
           <div style={{ display:'flex', gap: 14, marginTop: 4, fontSize: 12, color:'var(--muted)' }}>
             <span style={{ display:'inline-flex', alignItems:'center', gap: 6 }}><span className="dot" style={{ background: 'var(--ok)'}}/>green &lt; 0.1</span>
@@ -68,7 +68,7 @@ const TabModel = () => {
         <Card title="Retraining pipeline" sub="Apache Airflow · ml-prism-retrain DAG">
           <RetrainPipeline/>
         </Card>
-        <Card title="Hyperparameters" sub="v3.2 — XGBoost classifier">
+        <Card title="Hyperparameters" sub="v3.2 - XGBoost classifier">
           <HyperparamGrid/>
         </Card>
       </div>
@@ -141,8 +141,8 @@ const RetrainPipeline = () => {
     { t: 'Train XGBoost',        v: '12 trees, depth 6 · MLflow run 412', dur: '8m', ok: true },
     { t: 'Evaluate on holdout',  v: 'acc 94.6% (+0.4)', dur: '1m', ok: true },
     { t: 'Bias / fairness check',v: 'no per-vendor disparity', dur: '40s', ok: true },
-    { t: 'Approval gate',        v: 'awaiting platform admin', dur: '—', ok: false, pending: true },
-    { t: 'Deploy to staging',    v: 'pending approval', dur: '—', ok: false, pending: true },
+    { t: 'Approval gate',        v: 'awaiting platform admin', dur: '-', ok: false, pending: true },
+    { t: 'Deploy to staging',    v: 'pending approval', dur: '-', ok: false, pending: true },
   ];
   return (
     <div>
@@ -164,7 +164,7 @@ const RetrainPipeline = () => {
         </div>
       ))}
       <div style={{ marginTop: 12, padding: 10, background:'var(--warn-bg)', borderRadius: 8, fontSize: 12, color:'var(--warn)' }}>
-        <Icon name="flag" size={13}/> &nbsp;Next retrain candidate <b>v3.3</b> is ready for promotion — accuracy delta +0.4pp.
+        <Icon name="flag" size={13}/> &nbsp;Next retrain candidate <b>v3.3</b> is ready for promotion - accuracy delta +0.4pp.
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-/* PRISM mock data — Mediterranea Cargo Lines (24-vessel fleet) */
+/* PRISM mock data - Mediterranea Cargo Lines (24-vessel fleet) */
 (function(){
   // ----------- KPIs / Summary -----------
   const KPI = {
@@ -88,15 +88,15 @@
   const PO_DESCRIPTIONS = [
     { desc: 'IFO 380 cSt bunker fuel, 240 MT, delivery port Algeciras',     vendor: 'ENI Marine Fuels',        amount: 142_400, oldCat: 'Materiali Generici',     newCat: 'Bunker Fuel',          conf: 0.97 },
     { desc: 'Filtri olio motore principale MAN B&W 7S60ME-C, lotto 12 pz',   vendor: 'MAN Energy Solutions',    amount:  18_320, oldCat: 'Spare Parts Generic',    newCat: 'Marine Spare Parts',   conf: 0.94 },
-    { desc: 'Mobilgear SHC XMP 320 — 4× drum 208 L',                          vendor: 'Shell Marine Lubricants', amount:   6_240, oldCat: 'Misc supplies',          newCat: 'Lubricants & Greases', conf: 0.96 },
-    { desc: 'Pilotage charges Port of Genova — MV Adriatic Lupa, 2× movements',vendor: 'Port Authority of Genova',amount:   3_840, oldCat: 'Servizi vari',           newCat: 'Port & Pilotage Svc.', conf: 0.99 },
+    { desc: 'Mobilgear SHC XMP 320 - 4× drum 208 L',                          vendor: 'Shell Marine Lubricants', amount:   6_240, oldCat: 'Misc supplies',          newCat: 'Lubricants & Greases', conf: 0.96 },
+    { desc: 'Pilotage charges Port of Genova - MV Adriatic Lupa, 2× movements',vendor: 'Port Authority of Genova',amount:   3_840, oldCat: 'Servizi vari',           newCat: 'Port & Pilotage Svc.', conf: 0.99 },
     { desc: 'Guarnizioni testa cilindro Wärtsilä W46F, set completo',          vendor: 'Wärtsilä Service Italy',  amount:  24_700, oldCat: 'Materiali Generici',     newCat: 'Marine Spare Parts',   conf: 0.91 },
-    { desc: 'Detergente sgrassante industriale 25L — 40 taniche',              vendor: 'Mediterraneo Forniture',  amount:   1_280, oldCat: 'Generic Trade',          newCat: 'Cleaning & Hygiene',   conf: 0.78 },
-    { desc: 'Provviste di bordo galley — fresh produce, settimanale',          vendor: 'Forniture Navali Bonomi', amount:   4_120, oldCat: 'Vari',                   newCat: 'Provisions / Galley',  conf: 0.84 },
-    { desc: 'Certificazione SOLAS — rinnovo annuale MV Vesuvio',              vendor: 'Lloyd\'s Register Italia',amount:  18_900, oldCat: 'Servizi tecnici',        newCat: 'Marine Insurance',     conf: 0.58 },
-    { desc: 'Chiavi inglesi industriali set 8-32 mm — 4 set',                   vendor: 'Generic Trade SRL',       amount:     840, oldCat: 'Materiali Generici',     newCat: 'Deck & Engine Tools',  conf: 0.72 },
-    { desc: 'Antenna VSAT KU-band — installazione e canone 12 mesi',           vendor: 'Generic Trade SRL',       amount:  14_280, oldCat: 'IT services',            newCat: 'IT & Telematics',      conf: 0.66 },
-    { desc: 'Olio motore SAE 40 — 2× IBC 1000L (consegna Napoli)',             vendor: 'Castrol Marine',          amount:   7_680, oldCat: 'Materiali Generici',     newCat: 'Lubricants & Greases', conf: 0.93 },
+    { desc: 'Detergente sgrassante industriale 25L - 40 taniche',              vendor: 'Mediterraneo Forniture',  amount:   1_280, oldCat: 'Generic Trade',          newCat: 'Cleaning & Hygiene',   conf: 0.78 },
+    { desc: 'Provviste di bordo galley - fresh produce, settimanale',          vendor: 'Forniture Navali Bonomi', amount:   4_120, oldCat: 'Vari',                   newCat: 'Provisions / Galley',  conf: 0.84 },
+    { desc: 'Certificazione SOLAS - rinnovo annuale MV Vesuvio',              vendor: 'Lloyd\'s Register Italia',amount:  18_900, oldCat: 'Servizi tecnici',        newCat: 'Marine Insurance',     conf: 0.58 },
+    { desc: 'Chiavi inglesi industriali set 8-32 mm - 4 set',                   vendor: 'Generic Trade SRL',       amount:     840, oldCat: 'Materiali Generici',     newCat: 'Deck & Engine Tools',  conf: 0.72 },
+    { desc: 'Antenna VSAT KU-band - installazione e canone 12 mesi',           vendor: 'Generic Trade SRL',       amount:  14_280, oldCat: 'IT services',            newCat: 'IT & Telematics',      conf: 0.66 },
+    { desc: 'Olio motore SAE 40 - 2× IBC 1000L (consegna Napoli)',             vendor: 'Castrol Marine',          amount:   7_680, oldCat: 'Materiali Generici',     newCat: 'Lubricants & Greases', conf: 0.93 },
     { desc: 'Pompa centrifuga ricambio + tenuta meccanica',                   vendor: 'Wärtsilä Service Italy',  amount:  31_200, oldCat: 'Generic equipment',      newCat: 'Marine Spare Parts',   conf: 0.88 },
   ];
 
@@ -118,7 +118,7 @@
     { t: '14:32:09', who: 'Reviewer · M.Rossi', msg: 'Approved correction PO-2026-48206 → <b>IT & Telematics</b>', kind: 'ok' },
     { t: '14:31:54', who: 'Knowledge Base', msg: 'Matched UNSPSC 25171500 with 3 prior similar POs', kind: 'info' },
     { t: '14:31:42', who: 'Orchestrator', msg: 'Routed PO-2026-48203 to <b>review</b> · conf 0.58', kind: 'warn' },
-    { t: '14:31:30', who: 'LLM Agent', msg: 'Confidence drop on "Generic Trade SRL" descriptions — flagging vendor', kind: 'warn' },
+    { t: '14:31:30', who: 'LLM Agent', msg: 'Confidence drop on "Generic Trade SRL" descriptions - flagging vendor', kind: 'warn' },
     { t: '14:31:18', who: 'System', msg: 'Drift detection completed · score 0.07 (below threshold)', kind: 'ok' },
     { t: '14:31:02', who: 'Reviewer · A.Bianchi', msg: 'Sent 4 correction samples to retraining buffer', kind: 'info' },
     { t: '14:30:47', who: 'ML Classifier', msg: 'Model v3.2 active · last retrain 18h ago', kind: 'info' },
