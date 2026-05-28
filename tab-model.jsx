@@ -125,7 +125,6 @@ const CategoryAccChart = () => {
           <span style={{ fontWeight: 600, color: 'var(--ink-2)' }}>{it.cat}</span>
           <span style={{ position:'relative', height: 14, background:'var(--bg-2)', borderRadius: 4, overflow:'hidden' }}>
             <span style={{ position:'absolute', left:0, top:0, bottom:0, width: `${it.acc}%`, background: it.color, borderRadius: 4 }}/>
-            <span style={{ position:'absolute', right: 6, top: -1, fontSize: 10.5, color: '#fff', mixBlendMode: 'difference' }} className="mono tnum">{it.acc.toFixed(1)}%</span>
           </span>
           <span className="mono tnum" style={{ textAlign:'right', fontWeight: 700 }}>{it.acc.toFixed(1)}%</span>
         </div>
