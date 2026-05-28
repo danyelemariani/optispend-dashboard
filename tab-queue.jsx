@@ -62,6 +62,61 @@ const TabQueue = ({ onOpenDetail }) => {
     </div>
   );
 };
+const getMockSimilarPOs = (category) => {
+  const mockKB = {
+    'Bunker Fuel': [
+      { id: 'KB-2025-0104', desc: 'Bunker fuel IFO 180 cSt, 180 MT, Genoa delivery', vendor: 'ENI Marine Fuels', amount: 98400, conf: 0.98 },
+      { id: 'KB-2025-0322', desc: 'MGO Marine Gas Oil, 50 MT, bunkering at Augusta', vendor: 'ENI Marine Fuels', amount: 32600, conf: 0.97 },
+      { id: 'KB-2025-0511', desc: 'Bunker IFO 380, 200 MT, Rotterdam port', vendor: 'BP Marine', amount: 118000, conf: 0.99 }
+    ],
+    'Lubricants & Greases': [
+      { id: 'KB-2025-0812', desc: 'Olio lubrificante motore Castrol Cyltech 70 - 4 IBC 1000L', vendor: 'Castrol Marine', amount: 15400, conf: 0.96 },
+      { id: 'KB-2025-0902', desc: 'Mobilgard 312, 10 fusti da 208L', vendor: 'Shell Marine Lubricants', amount: 3800, conf: 0.94 },
+      { id: 'KB-2025-1011', desc: 'Grasso per macchinari coperta Mobilux EP 2', vendor: 'Shell Marine Lubricants', amount: 1200, conf: 0.91 }
+    ],
+    'Marine Spare Parts': [
+      { id: 'KB-2025-1102', desc: 'Segmenti pistone motore Wärtsilä 32, set da 6 pz', vendor: 'Wärtsilä Service Italy', amount: 12400, conf: 0.95 },
+      { id: 'KB-2025-1115', desc: 'Valvole di aspirazione MAN B&W 50MC', vendor: 'MAN Energy Solutions', amount: 9600, conf: 0.93 },
+      { id: 'KB-2025-1201', desc: 'Ugelli iniettori combustibile per generatore auxiliary', vendor: 'Wärtsilä Service Italy', amount: 4800, conf: 0.92 }
+    ],
+    'Port & Pilotage Svc.': [
+      { id: 'KB-2025-0410', desc: 'Pilotage fees Port of Venice - MV Tirreno Star', vendor: 'Port Authority of Venice', amount: 2800, conf: 0.99 },
+      { id: 'KB-2025-0604', desc: 'Rimorchiatori Porto di Napoli - Assistenza ormeggio', vendor: 'Rimorchiatori Napoletani', amount: 7200, conf: 0.98 },
+      { id: 'KB-2025-0715', desc: 'Tasse portuali di ancoraggio - MV Genova Spirit', vendor: 'Port Authority of Genova', amount: 4500, conf: 0.97 }
+    ],
+    'Deck & Engine Tools': [
+      { id: 'KB-2025-0219', desc: 'Smerigliatrice angolare Bosch Professional GWS 22-230 LVI', vendor: 'Generic Trade SRL', amount: 420, conf: 0.88 },
+      { id: 'KB-2025-0310', desc: 'Set chiavi a bussola BETA 1/2 pollici, 25 pz', vendor: 'Generic Trade SRL', amount: 350, conf: 0.91 },
+      { id: 'KB-2025-0402', desc: 'Trapano a percussione Makita HP2071F', vendor: 'Generic Trade SRL', amount: 280, conf: 0.89 }
+    ],
+    'Cleaning & Hygiene': [
+      { id: 'KB-2025-0112', desc: 'Sgrassante biodegradabile per sentina - Tanica 25L x 10', vendor: 'Mediterraneo Forniture', amount: 450, conf: 0.92 },
+      { id: 'KB-2025-0220', desc: 'Rotoli carta assorbente industriale x 24', vendor: 'Mediterraneo Forniture', amount: 320, conf: 0.94 },
+      { id: 'KB-2025-0315', desc: 'Sapone liquido lavamani officina - Tanica 5L x 8', vendor: 'Mediterraneo Forniture', amount: 180, conf: 0.91 }
+    ],
+    'Provisions / Galley': [
+      { id: 'KB-2025-0708', desc: 'Fornitura viveri bordo: carne fresca e congelata', vendor: 'Forniture Navali Bonomi', amount: 2800, conf: 0.96 },
+      { id: 'KB-2025-0719', desc: 'Frutta e verdura fresca - Consegna settimanale Livorno', vendor: 'Forniture Navali Bonomi', amount: 1200, conf: 0.95 },
+      { id: 'KB-2025-0801', desc: 'Prodotti secchi e in scatola per cambusa MV Vesuvio', vendor: 'Forniture Navali Bonomi', amount: 3100, conf: 0.97 }
+    ],
+    'Marine Insurance': [
+      { id: 'KB-2025-0101', desc: 'Polizza H&M Hull & Machinery MV Tirreno Star - Quota Q1', vendor: 'Generali Marine Insurance', amount: 45000, conf: 0.99 },
+      { id: 'KB-2025-0115', desc: 'Copertura P&I Protection & Indemnity - Rata annuale', vendor: 'Generali Marine Insurance', amount: 120000, conf: 0.99 },
+      { id: 'KB-2025-0210', desc: 'Rinnovo assicurativo Cargo Liability 2026', vendor: 'Generali Marine Insurance', amount: 35000, conf: 0.98 }
+    ],
+    'IT & Telematics': [
+      { id: 'KB-2025-0520', desc: 'Canone mensile connettività satellitare FleetBroadband', vendor: 'Generic Trade SRL', amount: 2400, conf: 0.94 },
+      { id: 'KB-2025-0612', desc: 'Router Cisco Catalyst 1000 - Sostituzione apparato', vendor: 'Generic Trade SRL', amount: 1100, conf: 0.95 },
+      { id: 'KB-2025-0704', desc: 'Licenze software navigazione ECDIS - Update annuale', vendor: 'Generic Trade SRL', amount: 4500, conf: 0.93 }
+    ],
+    'Other / Misc.': [
+      { id: 'KB-2025-0303', desc: 'Servizi di smaltimento rifiuti di bordo - Porto di Trieste', vendor: 'Ecoservizi Navali', amount: 1500, conf: 0.91 },
+      { id: 'KB-2025-0420', desc: 'Disinfestazione cambusa e alloggi equipaggio', vendor: 'Forniture Navali Bonomi', amount: 800, conf: 0.88 },
+      { id: 'KB-2025-0518', desc: 'Noleggio attrezzatura ponte per lavori straordinari', vendor: 'Generic Trade SRL', amount: 2100, conf: 0.85 }
+    ]
+  };
+  return mockKB[category] || [];
+};
 
 const ReviewDetail = ({ po, onOpenDetail }) => {
   const D = window.PRISM_DATA;
@@ -76,8 +131,13 @@ const ReviewDetail = ({ po, onOpenDetail }) => {
     { a: D.AGENTS[3], cat: po.newCat,   conf: po.conf },
   ];
 
-  // Similar POs from KB
-  const similar = D.PO_ROWS.filter(p => p.id !== po.id && p.newCat === po.newCat).slice(0, 3);
+  // Similar POs from KB (fallback to RAG simulation if live results are sparse)
+  let similarMatches = D.PO_ROWS.filter(p => p.id !== po.id && p.newCat === po.newCat);
+  if (similarMatches.length < 3) {
+    const mockItems = getMockSimilarPOs(po.newCat);
+    similarMatches = [...similarMatches, ...mockItems];
+  }
+  const similar = similarMatches.slice(0, 3);
 
   return (
     <div className="detail">

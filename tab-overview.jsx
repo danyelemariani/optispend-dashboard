@@ -182,8 +182,8 @@ const RoutingCard = () => {
   ];
   return (
     <Card title="Stato revisione ordini" sub="semaforo · last 24h" padded={true}>
-      <div style={{ display:'flex', alignItems:'center', gap: 16 }}>
-        <div style={{ position:'relative' }}>
+      <div style={{ display:'flex', flexDirection: 'column', alignItems:'center', gap: 20 }}>
+        <div style={{ position:'relative', display: 'flex', justifyContent: 'center' }}>
           <Donut segments={segs} size={140} stroke={20}/>
           <div style={{ position:'absolute', inset: 0, display:'grid', placeItems:'center', textAlign:'center' }}>
             <div>
@@ -192,7 +192,7 @@ const RoutingCard = () => {
             </div>
           </div>
         </div>
-        <div style={{ flex: 1, display:'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ width: '100%', display:'flex', flexDirection: 'column', gap: 10 }}>
           <RoutingRow color={'var(--ok)'}   label="Conforme · approva"     sub="verde"  pct={r.auto.share}    n={r.auto.count}/>
           <RoutingRow color={'var(--warn)'} label="Da verificare"          sub="giallo" pct={r.review.share}  n={r.review.count}/>
           <RoutingRow color={'var(--err)'}  label="Critico · non conforme" sub="rosso"  pct={r.escalate.share}n={r.escalate.count}/>
