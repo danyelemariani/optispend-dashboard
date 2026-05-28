@@ -1,4 +1,4 @@
-/* PRISM - main app shell */
+/* SpendWise - main app shell */
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "light",
@@ -151,7 +151,7 @@ const Sidebar = ({ active, onSelect }) => (
 
 // -------------------- TopBar --------------------
 const TopBar = ({ active, useCase }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const uc = D.USE_CASES[useCase] || D.USE_CASES.shipping;
   return (
     <div className="topbar">

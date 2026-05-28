@@ -1,7 +1,7 @@
-/* PRISM - Multi-Agent Monitoring tab */
+/* SpendWise - Multi-Agent Monitoring tab */
 
 const TabAgents = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   return (
     <div>
       <div className="page-head">
@@ -209,7 +209,7 @@ const RouteCard = ({ color, title, range, share }) => (
 );
 
 const LatencyChart = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const w = 600, h = 200, padL = 40, padR = 12, padT = 12, padB = 30;
   const cw = w - padL - padR, ch = h - padT - padB;
   const N = 24;
@@ -247,7 +247,7 @@ const LatencyChart = () => {
 };
 
 const VolumeChart = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const w = 600, h = 200, padL = 40, padR = 12, padT = 12, padB = 30;
   const cw = w - padL - padR, ch = h - padT - padB;
   const N = 24;

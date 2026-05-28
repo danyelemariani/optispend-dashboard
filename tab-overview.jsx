@@ -1,11 +1,11 @@
-/* PRISM - Executive Overview tab
+/* SpendWise - Executive Overview tab
    - Live multi-agent pipeline (hero)
    - KPI tiles
    - Routing donut + Recent POs + Live feed
 */
 
 const TabOverview = ({ useCase, density }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const [activeIdx, setActiveIdx] = React.useState(0);
 
   // Pulse-cycle through agents to convey "live processing"
@@ -155,7 +155,7 @@ const TabOverview = ({ useCase, density }) => {
 
 // -------------------- UseCaseBar --------------------
 const UseCaseBar = ({ useCase }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const uc = D.USE_CASES[useCase] || D.USE_CASES.shipping;
   return (
     <div className="usecase-bar">
@@ -173,7 +173,7 @@ const UseCaseBar = ({ useCase }) => {
 
 // -------------------- Routing card --------------------
 const RoutingCard = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const r = D.ROUTING;
   const segs = [
     { value: r.auto.count, color: r.auto.color, label: 'auto' },
@@ -219,7 +219,7 @@ const RoutingRow = ({ color, label, sub, pct, n }) => (
 
 // -------------------- Recent POs --------------------
 const RecentPOsCard = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const rows = D.PO_ROWS.slice(0, 6);
   return (
     <Card title="Recent classifications" sub="live" padded={false}
@@ -257,7 +257,7 @@ const RecentPOsCard = () => {
 
 // -------------------- Activity feed --------------------
 const ActivityCard = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   return (
     <Card title="Activity" sub="live" padded={true}
       right={<span className="pill green"><span className="dot" style={{ background: 'currentColor' }}/>live</span>}>
@@ -283,11 +283,11 @@ const ActivityCard = () => {
 
 // -------------------- Errors by category --------------------
 const ErrorByCategoryCard = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const sorted = [...D.CATEGORIES].sort((a,b) => b.errPrev - a.errPrev).slice(0, 8);
   const maxErr = Math.max(...sorted.map(c => c.errPrev));
   return (
-    <Card title="Misclassification rate - before / after PRISM" sub="last 90 days vs. baseline" padded={true}>
+    <Card title="Misclassification rate - before / after SpendWise" sub="last 90 days vs. baseline" padded={true}>
       <div style={{ display:'flex', flexDirection: 'column', gap: 9 }}>
         {sorted.map(c => (
           <div key={c.code}>
@@ -313,7 +313,7 @@ const ErrorByCategoryCard = () => {
 
 // -------------------- Fleet snapshot --------------------
 const FleetSnapshotCard = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   return (
     <Card title="Fleet spend snapshot" sub="MTD" padded={true}
       right={

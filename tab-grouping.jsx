@@ -3,7 +3,7 @@
 */
 
 const TabGrouping = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const [window_, setWindow_] = React.useState('week');
 
   // Build groups: same vendor + delivery within window

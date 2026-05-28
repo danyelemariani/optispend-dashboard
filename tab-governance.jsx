@@ -1,7 +1,7 @@
-/* PRISM - Governance & Audit tab */
+/* SpendWise - Governance & Audit tab */
 
 const TabGovernance = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   return (
     <div>
       <div className="page-head">

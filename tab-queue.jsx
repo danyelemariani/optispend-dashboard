@@ -1,7 +1,7 @@
-/* PRISM - Review Queue (Human in the Loop) */
+/* SpendWise - Review Queue (Human in the Loop) */
 
 const TabQueue = ({ onOpenDetail }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   // queue is review + escalate
   const queue = D.PO_ROWS.filter(p => p.route !== 'auto');
   const [selectedId, setSelectedId] = React.useState(queue[0]?.id);
@@ -119,7 +119,7 @@ const getMockSimilarPOs = (category) => {
 };
 
 const ReviewDetail = ({ po, onOpenDetail }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const [pick, setPick] = React.useState(po.newCat);
   React.useEffect(() => setPick(po.newCat), [po.id]);
 

@@ -1,7 +1,7 @@
-/* PRISM - Spend Analysis tab */
+/* SpendWise - Spend Analysis tab */
 
 const TabSpend = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const [grouping, setGrouping] = React.useState('category');
 
   return (
@@ -28,7 +28,7 @@ const TabSpend = () => {
 
       {/* Treemap + Tail spend */}
       <div className="grid-2-1" style={{ marginBottom: 16 }}>
-        <Card title="Spend by category - reclassified view" sub="UNSPSC, after PRISM"
+        <Card title="Spend by category - reclassified view" sub="UNSPSC, after SpendWise"
           right={
             <div className="tog">
               <button className={grouping==='category'?'on':''} onClick={() => setGrouping('category')}>Category</button>
@@ -60,7 +60,7 @@ const TabSpend = () => {
             <MiniStat label="Sub-€10k vendors" value="64" tone="muted"/>
           </div>
           <div style={{ marginTop: 10, padding: 10, background: 'var(--info-bg)', borderRadius: 8, fontSize: 12, color: 'var(--info)' }}>
-            <Icon name="sparkles" size={13}/> &nbsp;PRISM identified <b>1.62 M€</b> in consolidation opportunities across 38 tail-spend vendors with overlapping SKUs.
+            <Icon name="sparkles" size={13}/> &nbsp;SpendWise identified <b>1.62 M€</b> in consolidation opportunities across 38 tail-spend vendors with overlapping SKUs.
           </div>
         </Card>
       </div>
@@ -131,7 +131,7 @@ const MiniStat = ({ label, value, tone }) => {
 
 const ParetoChart = () => {
   // Pareto: bars (descending vendor spend) + cumulative line
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const vendors = [...D.SUPPLIERS].sort((a,b) => b.spend - a.spend);
   const total = vendors.reduce((s,v) => s + v.spend, 0);
   const w = 360, h = 200, padL = 28, padR = 36, padT = 12, padB = 28;
@@ -167,7 +167,7 @@ const ParetoChart = () => {
 };
 
 const SpendTrendChart = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const months = ['Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May'];
   const cats = D.CATEGORIES.slice(0,4);
   const w = 720, h = 220, padL = 40, padR = 12, padT = 12, padB = 30;

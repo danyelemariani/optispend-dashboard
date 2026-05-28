@@ -1,7 +1,7 @@
-/* PRISM - PO Detail + Explainability tab */
+/* SpendWise - PO Detail + Explainability tab */
 
 const TabDetail = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const po = D.PO_ROWS[0]; // featured PO
 
   return (
@@ -138,7 +138,7 @@ const TabDetail = () => {
 };
 
 const PipelineTrace = ({ po }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const steps = [
     { t: 0,     who: 'Ingestion',     msg: 'PO record retrieved from SAP MM',                     latency: 8,   color: 'var(--ink-2)' },
     { t: 8,     who: 'Preprocess',    msg: 'Tokenize · UoM normalized · vendor matched',           latency: 12,  color: 'var(--ink-2)' },

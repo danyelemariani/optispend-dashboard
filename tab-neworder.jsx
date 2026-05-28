@@ -3,7 +3,7 @@
 */
 
 const TabNewOrder = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
 
   // Suggested option dictionaries
   const SUGG = {

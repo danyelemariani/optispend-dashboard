@@ -1,7 +1,7 @@
-/* PRISM - Supplier Consolidation tab */
+/* SpendWise - Supplier Consolidation tab */
 
 const TabSuppliers = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const sorted = [...D.SUPPLIERS].sort((a,b) => b.spend - a.spend);
   return (
     <div>

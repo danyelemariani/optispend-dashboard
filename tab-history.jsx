@@ -87,7 +87,7 @@ const TabHistory = () => {
 };
 
 const AnalysisDetail = ({ a, onBack }) => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const [editing, setEditing] = React.useState(false);
   const [draft, setDraft] = React.useState({ title: a.title, period: a.period, status: a.status });
 

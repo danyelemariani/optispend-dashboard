@@ -1,7 +1,7 @@
-/* PRISM - Model Performance & Drift tab */
+/* SpendWise - Model Performance & Drift tab */
 
 const TabModel = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   return (
     <div>
       <div className="page-head">
@@ -65,7 +65,7 @@ const TabModel = () => {
       </div>
 
       <div className="grid-2" style={{ marginBottom: 16 }}>
-        <Card title="Retraining pipeline" sub="Apache Airflow · ml-prism-retrain DAG">
+        <Card title="Retraining pipeline" sub="Apache Airflow · ml-spendwise-retrain DAG">
           <RetrainPipeline/>
         </Card>
         <Card title="Hyperparameters" sub="v3.2 - XGBoost classifier">
@@ -77,7 +77,7 @@ const TabModel = () => {
 };
 
 const ConfusionMatrix = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const M = D.CONFUSION;
   const labels = D.CONFUSION_LABELS;
   const allMax = Math.max(...M.flat());
@@ -112,7 +112,7 @@ const ConfusionMatrix = () => {
 };
 
 const CategoryAccChart = () => {
-  const D = window.PRISM_DATA;
+  const D = window.SPENDWISE_DATA;
   const items = D.CATEGORIES.slice(0,8).map(c => ({
     cat: c.name,
     acc: 100 - c.errNow,

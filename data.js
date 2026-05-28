@@ -1,4 +1,4 @@
-/* PRISM mock data - Mediterranea Cargo Lines (24-vessel fleet) */
+/* SpendWise mock data - Mediterranea Cargo Lines (24-vessel fleet) */
 (function(){
   // ----------- KPIs / Summary -----------
   const KPI = {
@@ -150,7 +150,7 @@
 
   // ----------- Audit trail -----------
   const AUDIT = [
-    { ts:'2026-05-20 14:32:18', actor:'orchestrator@prism',     action:'CLASSIFY', target:'PO-2026-48210', detail:'auto · Bunker Fuel · v3.2', kind:'ok' },
+    { ts:'2026-05-20 14:32:18', actor:'orchestrator@spendwise',     action:'CLASSIFY', target:'PO-2026-48210', detail:'auto · Bunker Fuel · v3.2', kind:'ok' },
     { ts:'2026-05-20 14:32:09', actor:'m.rossi@spendwise.io',         action:'APPROVE',  target:'PO-2026-48206', detail:'override → IT & Telematics', kind:'ok' },
     { ts:'2026-05-20 14:30:02', actor:'a.bianchi@spendwise.io',       action:'RETRAIN',  target:'buffer-348',    detail:'4 corrections appended', kind:'info' },
     { ts:'2026-05-20 13:58:44', actor:'system',                   action:'DRIFT',    target:'model v3.2',    detail:'score 0.07 OK', kind:'ok' },
@@ -168,7 +168,7 @@
     manuf:    { name: 'Manufacturing',  company: 'AutoMeccanica Torino',      sub: 'Tier-1 automotive supplier · 4 plants',                     scheme: 'UNSPSC' },
   };
 
-  window.PRISM_DATA = {
+  window.SPENDWISE_DATA = {
     KPI, SPARKS, AGENTS, CATEGORIES, FLEET, SUPPLIERS, PO_ROWS, ACTIVITY, ROUTING, DRIFT,
     CONFUSION_LABELS, CONFUSION, AUDIT, USE_CASES,
   };

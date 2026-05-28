@@ -1,4 +1,4 @@
-/* Shared building-block components for PRISM dashboard */
+/* Shared building-block components for SpendWise dashboard */
 
 // -------------------- Icons (inline SVG) --------------------
 const Icon = ({ name, size = 18, stroke = 1.6 }) => {
