@@ -17,7 +17,7 @@ const NAV = [
   ]},
   { group: 'Analyses', items: [
     { id: 'spend',       label: 'Spend Analysis',          icon: 'chart' },
-    { id: 'history',     label: 'Spendoanalisi precedenti',icon: 'book' },
+    { id: 'history',     label: 'Spend Analysis Precedenti',icon: 'book' },
     { id: 'suppliers',   label: 'Fornitori',               icon: 'truck' },
   ]},
   { group: 'ML / Platform', items: [
@@ -34,7 +34,7 @@ const TAB_TITLES = {
   grouping:   'Raggruppamento ordini',
   detail:     'PO Detail',
   spend:      'Spend Analysis',
-  history:    'Spendoanalisi precedenti',
+  history:    'Spend Analysis Precedenti',
   suppliers:  'Fornitori',
   agents:     'Multi-Agent Monitor',
   model:      'Model & Drift',

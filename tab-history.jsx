@@ -1,4 +1,4 @@
-/* SpendWise - Spendoanalisi precedenti (Past Analyses)
+/* SpendWise - Spend Analysis Precedenti (Past Analyses)
    View / filter by year / review / edit
 */
 
@@ -20,7 +20,7 @@ const TabHistory = () => {
     <div>
       <div className="page-head">
         <div>
-          <h1>Spendoanalisi precedenti</h1>
+          <h1>Spend Analysis Precedenti</h1>
           <div className="sub">Tutte le analisi storiche · filtra per anno · apri per revisione e modifica</div>
         </div>
         <div className="actions">
