@@ -104,10 +104,10 @@ const ComplianceItem = ({ ok, warn, title, sub }) => (
 
 const ModelLineage = () => {
   const versions = [
-    { v: 'v3.2', date: '2026-04-28', acc: 94.2, status:'live',     by:'l.conti@optispend.io' },
-    { v: 'v3.1', date: '2026-03-12', acc: 92.8, status:'archived', by:'l.conti@optispend.io' },
-    { v: 'v3.0', date: '2026-01-22', acc: 91.4, status:'archived', by:'g.ferraro@optispend.io' },
-    { v: 'v2.4', date: '2025-11-04', acc: 89.1, status:'archived', by:'g.ferraro@optispend.io' },
+    { v: 'v3.2', date: '2026-04-28', acc: 94.2, status:'live',     by:'l.conti@spendwise.io' },
+    { v: 'v3.1', date: '2026-03-12', acc: 92.8, status:'archived', by:'l.conti@spendwise.io' },
+    { v: 'v3.0', date: '2026-01-22', acc: 91.4, status:'archived', by:'g.ferraro@spendwise.io' },
+    { v: 'v2.4', date: '2025-11-04', acc: 89.1, status:'archived', by:'g.ferraro@spendwise.io' },
   ];
   return (
     <div style={{ display:'flex', flexDirection: 'column', gap: 0 }}>

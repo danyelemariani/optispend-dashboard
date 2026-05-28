@@ -1,7 +1,7 @@
 {
-  "name": "optispend-dashboard",
+  "name": "spendwise-dashboard",
   "version": "1.0.0",
-  "description": "OptiSpend · Spend Analysis AI Dashboard",
+  "description": "SpendWise · Spend Analysis AI Dashboard",
   "private": true,
   "scripts": {
     "dev": "npx -y serve ."

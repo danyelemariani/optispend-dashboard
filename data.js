@@ -151,13 +151,13 @@
   // ----------- Audit trail -----------
   const AUDIT = [
     { ts:'2026-05-20 14:32:18', actor:'orchestrator@prism',     action:'CLASSIFY', target:'PO-2026-48210', detail:'auto · Bunker Fuel · v3.2', kind:'ok' },
-    { ts:'2026-05-20 14:32:09', actor:'m.rossi@optispend.io',         action:'APPROVE',  target:'PO-2026-48206', detail:'override → IT & Telematics', kind:'ok' },
-    { ts:'2026-05-20 14:30:02', actor:'a.bianchi@optispend.io',       action:'RETRAIN',  target:'buffer-348',    detail:'4 corrections appended', kind:'info' },
+    { ts:'2026-05-20 14:32:09', actor:'m.rossi@spendwise.io',         action:'APPROVE',  target:'PO-2026-48206', detail:'override → IT & Telematics', kind:'ok' },
+    { ts:'2026-05-20 14:30:02', actor:'a.bianchi@spendwise.io',       action:'RETRAIN',  target:'buffer-348',    detail:'4 corrections appended', kind:'info' },
     { ts:'2026-05-20 13:58:44', actor:'system',                   action:'DRIFT',    target:'model v3.2',    detail:'score 0.07 OK', kind:'ok' },
-    { ts:'2026-05-20 13:42:11', actor:'l.conti@optispend.io',          action:'REJECT',   target:'PO-2026-48177', detail:'wrong UNSPSC suggested', kind:'warn' },
+    { ts:'2026-05-20 13:42:11', actor:'l.conti@spendwise.io',          action:'REJECT',   target:'PO-2026-48177', detail:'wrong UNSPSC suggested', kind:'warn' },
     { ts:'2026-05-20 12:14:55', actor:'system',                   action:'DEPLOY',   target:'model v3.2',    detail:'promoted from staging', kind:'info' },
     { ts:'2026-05-19 22:08:30', actor:'system',                   action:'INGEST',   target:'SAP-MM batch',  detail:'4,210 PO ingested · 0 errors', kind:'ok' },
-    { ts:'2026-05-19 18:47:02', actor:'g.ferraro@optispend.io',        action:'CONFIG',   target:'thresholds',    detail:'auto > 0.85 (was 0.82)', kind:'info' },
+    { ts:'2026-05-19 18:47:02', actor:'g.ferraro@spendwise.io',        action:'CONFIG',   target:'thresholds',    detail:'auto > 0.85 (was 0.82)', kind:'info' },
   ];
 
   // ----------- Use-case definitions -----------

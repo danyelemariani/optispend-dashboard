@@ -1,4 +1,4 @@
-/* OptiSpend - Raggruppa ordini
+/* SpendWise - Raggruppa ordini
    Auto-grouping orders from same supplier to reduce shipping costs.
 */
 

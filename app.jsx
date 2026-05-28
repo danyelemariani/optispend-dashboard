@@ -117,7 +117,7 @@ const Sidebar = ({ active, onSelect }) => (
         </svg>
       </div>
       <div className="brand-text">
-        <div className="brand-name">OptiSpend</div>
+        <div className="brand-name">SpendWise</div>
         <div className="brand-sub">Spend AI Platform</div>
       </div>
     </div>

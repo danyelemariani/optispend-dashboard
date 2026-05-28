@@ -1,9 +1,9 @@
 /* =========================================================
-   PRISM - OptiSpend Spend Analysis AI Dashboard
+   PRISM - SpendWise Spend Analysis AI Dashboard
    Design tokens
    ========================================================= */
 :root {
-  /* OptiSpend palette (blue → purple) */
+  /* SpendWise palette (blue → purple) */
   --brand-blue:   #2557D6;
   --brand-blue-2: #3A6BE8;
   --brand-purple: #6635C8;

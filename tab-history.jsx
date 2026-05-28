@@ -1,4 +1,4 @@
-/* OptiSpend - Spendoanalisi precedenti (Past Analyses)
+/* SpendWise - Spendoanalisi precedenti (Past Analyses)
    View / filter by year / review / edit
 */
 
